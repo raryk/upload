@@ -1,0 +1,12 @@
+RewriteOptions inherit
+
+AddDefaultCharset utf-8
+
+Options -Indexes
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^([^.*]+)$ $1.php [L,QSA]
